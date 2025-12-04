@@ -7,7 +7,7 @@ def explore_ixbrl(file_path):
         soup = BeautifulSoup(f, "lxml")
 
     count = 0
-    print("📊 Showing financial (numeric) tags only...\n")
+    print(" Showing financial (numeric) tags only...\n")
     for tag in soup.find_all("ix:nonfraction"):  # this targets numeric values only
         tag_name = tag.get("name")
         tag_value = tag.text.strip()

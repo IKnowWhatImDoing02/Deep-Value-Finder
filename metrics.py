@@ -50,17 +50,17 @@ def print_metrics(data, metrics):
         if k not in metrics:
             print(f"{k}: {v:,.2f}" if isinstance(v, (int, float)) else f"{k}: {v}")
 
-    print("\n💥 NCAV (Net Current Asset Value):", format_safe(metrics["NCAV"], is_percent=False))
-    print("📈 Gross Margin:", format_safe(metrics["GrossMargin"], is_percent=True))
-    print("📘 Book Value per Share:", format_safe(metrics["BookValuePerShare"], is_percent=False, prefix="$"))
-    print("📊 Price-to-Book (P/B) Ratio:", format_safe(metrics["PB_Ratio"]))
-    print("⚙️ Operating Margin:", format_safe(metrics["OperatingMargin"], is_percent=True))
-    print("💵 Price-to-Earnings (P/E) Ratio:", format_safe(metrics["PE_Ratio"]))
-    print("💰 Price-to-Cash Ratio:", format_safe(metrics["PriceToCash"]))
-    print("🏦 Equity-to-Assets Ratio:", format_safe(metrics["EquityToAssets"], is_percent=True))
-    print("🧪 Current Ratio:", format_safe(metrics["CurrentRatio"]))
-    print("📉 Debt-to-Equity Ratio:", format_safe(metrics["DebtToEquity"]))
-    print("🚀 Return on Equity (ROE):", format_safe(metrics["ROE"], is_percent=True))
+    print("\n NCAV (Net Current Asset Value):", format_safe(metrics["NCAV"], is_percent=False))
+    print(" Gross Margin:", format_safe(metrics["GrossMargin"], is_percent=True))
+    print(" Book Value per Share:", format_safe(metrics["BookValuePerShare"], is_percent=False, prefix="$"))
+    print(" Price-to-Book (P/B) Ratio:", format_safe(metrics["PB_Ratio"]))
+    print(" Operating Margin:", format_safe(metrics["OperatingMargin"], is_percent=True))
+    print(" Price-to-Earnings (P/E) Ratio:", format_safe(metrics["PE_Ratio"]))
+    print(" Price-to-Cash Ratio:", format_safe(metrics["PriceToCash"]))
+    print(" Equity-to-Assets Ratio:", format_safe(metrics["EquityToAssets"], is_percent=True))
+    print(" Current Ratio:", format_safe(metrics["CurrentRatio"]))
+    print(" Debt-to-Equity Ratio:", format_safe(metrics["DebtToEquity"]))
+    print("🚀Return on Equity (ROE):", format_safe(metrics["ROE"], is_percent=True))
 
 def format_safe(val, is_percent=False, prefix=""):
     if val is None:

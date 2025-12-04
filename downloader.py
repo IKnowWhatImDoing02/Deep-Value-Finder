@@ -3,7 +3,7 @@ import os
 import time
 
 def download_latest_10k(ticker):
-    dl = Downloader(company_name="Masons Project", email_address="madtownmas@gmail.com")
+    dl = Downloader(company_name="Masons Project", email_address="fakeemail@gmail.com")
     dl.get("10-K", ticker, limit=1,download_details=True)
     time.sleep(0.5)  # avoid SEC rate limits
 

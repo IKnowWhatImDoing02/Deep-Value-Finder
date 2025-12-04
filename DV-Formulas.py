@@ -5,7 +5,7 @@ import re
 
 def download_latest_10k(ticker):
     # TODO: Change to real email
-    dl = Downloader(company_name="Masons Project", email_address="madtownmas@gmail.com")
+    dl = Downloader(company_name="Masons Project", email_address="fakeemail@gmail.com")
     
     # Download the most recent 10-K only
     dl.get("10-K", ticker, limit=1, download_details=True)
@@ -46,12 +46,12 @@ if __name__ == "__main__":
     filing_path = download_latest_10k(ticker)
     data = extract_financials(filing_path)
 
-    print(f"\n📊 Financials for {ticker}")
+    print(f"\n Financials for {ticker}")
     for k, v in data.items():
         print(f"{k}: ${v:,.2f}" if v else f"{k}: Not found")
 
     ncav = calculate_ncav(data['Current Assets'], data['Total Liabilities'])
     if ncav is not None:
-        print(f"\n📉 Net-Net Value (NCAV): ${ncav:,.2f}")
+        print(f"\n Net-Net Value (NCAV): ${ncav:,.2f}")
     else:
-        print("\n⚠️ Could not calculate NCAV.")
+        print("\nCould not calculate NCAV.")

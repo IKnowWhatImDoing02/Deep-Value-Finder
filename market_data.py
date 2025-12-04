@@ -13,5 +13,5 @@ def fetch_market_data(ticker):
             "MarketCap": market_cap
         }
     except Exception as e:
-        print(f"⚠️ Failed to fetch market data for {ticker}: {e}")
+        print(f" Failed to fetch market data for {ticker}: {e}")
         return {}

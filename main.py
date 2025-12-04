@@ -18,19 +18,19 @@ def run_for_ticker(ticker):
         print_metrics(data, metrics)
         
         if not metrics or any(v is None for v in metrics.values()):
-            print(f"🔍 Missing values for {ticker}. Running tag exploration...")
+            print(f" Missing values for {ticker}. Running tag exploration...")
             explore_ixbrl(path)
-            print(f"🧩 Incomplete parsed data for {ticker}:")
+            print(f" Incomplete parsed data for {ticker}:")
             for k, v in data.items():
                 if v is None:
-                    print(f"❌ Missing: {k}")
+                    print(f" Missing: {k}")
                 else:
-                    print(f"✅ {k}: {v}")
+                    print(f" {k}: {v}")
             return
 
         
     except Exception as e:
-        print(f"⚠️ Skipped {ticker} due to error: {e}")
+        print(f" Skipped {ticker} due to error: {e}")
 
 def main():
     for ticker in TICKERS:
